@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* custom components */
+  .navbar-item {
+    @apply font-bold;
+  }
+  .navbar-item.selected {
+    @apply relative ring-0 outline-none text-primary after:absolute after:-bottom-2 after:left-[45%] after:bg-primary after:rounded-full after:w-2 after:h-2;
+  }
+  .navbar-social {
+    @apply flex h-full rounded-full outline-none hover:bg-primary bg-primary/40 items-center justify-center aspect-square;
+  }
+  .button-primary {
+    @apply rounded-xl bg-primary font-bold hover:bg-primary/80 text-center p-2 text-white;
+  }
+  .button-secondary {
+    @apply rounded-xl bg-secondary hover:bg-secondary/60 text-center p-2 text-muted-foreground;
+  }
+  .columns{
+    @apply relative grid grid-cols-3 lg:grid-cols-5 overflow-y-hidden w-full ;
+  }
+  .column{
+    @apply flex flex-col space-y-2 py-[5vh] px-5 w-full;
+  }
+  .column-reverse{
+    @apply flex flex-col-reverse gap-y-2 py-[5vh] px-5 bg-background w-full;
+  }
+  .column-card{
+    @apply relative overflow-hidden flex-none flex flex-col items-center justify-evenly  rounded-md bg-background w-full aspect-[10/11] p-5
+    before:absolute before:w-1/5 before:h-full before:-bottom-1/2 before:end-0 before:blur-md  before:bg-primary before:rotate-45
+    after:absolute after:w-1/5 after:h-full after:-top-1/2 after:start-0 after:blur-md  after:bg-primary after:rotate-45;
+  }
+  .column-reverse .column-card{
+    @apply p-4 bg-primary/50
+    before:bg-primary
+    after:bg-primary;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 187 100% 42%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 47 99% 49%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 187 100% 42%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  /* general styles */
+  .slides:not(:has(:target)) + .indicators a:nth-child(1) {
+    @apply bg-accent  w-20;
+  }
+  .slides:has(div:nth-child(1):target) + .indicators a:nth-child(1) {
+    @apply bg-accent  w-20;
+  }
+  .slides:has(div:nth-child(2):target) + .indicators a:nth-child(2) {
+    @apply bg-accent w-20;
+  }
+  .slides:has(div:nth-child(3):target) + .indicators a:nth-child(3) {
+    @apply bg-accent w-20;
+  }
+  .slides:has(div:nth-child(4):target) + .indicators a:nth-child(4) {
+    @apply bg-accent w-20;
+  }
+  .slides:has(div:nth-child(5):target) + .indicators a:nth-child(5) {
+    @apply bg-accent w-20;
+  }
+  .slides:has(div:nth-child(6):target) + .indicators a:nth-child(6) {
+    @apply bg-accent w-20;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: theme('colors.background');
+    border-radius: 2px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.primary.DEFAULT');
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.secondary.DEFAULT');
+  }
+}
