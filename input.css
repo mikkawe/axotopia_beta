@@ -20,7 +20,7 @@
     @apply rounded-xl bg-secondary hover:bg-secondary/60 text-center p-2 text-muted-foreground;
   }
   .columns{
-    @apply relative grid grid-cols-3 lg:grid-cols-5 overflow-y-hidden w-full ;
+    @apply relative grid grid-cols-3 lg:grid-cols-5 overflow-y-hidden w-full p-5 ;
   }
   .column{
     @apply flex flex-col space-y-2 py-[5vh] px-5 w-full;
