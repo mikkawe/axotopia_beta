@@ -9,6 +9,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style>
+
+      /* Debbuggin */
+      /* *{
+        border-width: 8px !important;
+        border-color:red !important;
+      } */
       @keyframes reveal {
         0% {
           opacity: 0;
@@ -80,7 +86,7 @@
     >
       <div
         id="nav_logo"
-        class="w-[15%] h-full flex justify-center items-center"
+        class="w-[35%] sm:w-[15%] h-full flex justify-center items-center"
       >
         <img
           src="./images/Logo_original.png"
@@ -90,7 +96,7 @@
       </div>
       <nav
         id="menu"
-        class="w-full h-full flex flex-row gap-2 items-center px-4"
+        class="hidden w-full h-full sm:flex flex-row gap-2 items-center px-4"
       >
         <a href="home.html" class="navbar-item selected">Home</a>
         <a href="about.html" class="navbar-item">About Us</a>
@@ -99,9 +105,11 @@
         <a href="community.html" class="navbar-item">Community</a>
         <a href="faq.html" class="navbar-item">FAQ</a>
       </nav>
+      <div class="w-full h-full bg-black/20 p-4 sm:hidden">
+      </div>
       <div
         id="nav_socials"
-        class="w-2/5 h-full flex flex-row gap-2 items-center justify-center p-4"
+        class="hidden w-2/5 h-full sm:flex flex-row gap-2 items-center justify-center p-4"
       >
         <a href="facebook.com" class="navbar-social"
           ><i class="fa fa-facebook text-white fa-lg" aria-hidden="true"></i
@@ -119,7 +127,7 @@
     </header>
     <div id="navbar-holder" class="h-[15%] p-4 w-full"></div>
     <section id="Hero" class="h-[85%] p-4 w-full overflow-hidden">
-      <div class="w-[40%] h-full my-5">
+      <div class="w-full sm:w-[40%] h-full my-5">
         <h1 class="text-4xl leading-relaxed">
           Building the future of technology.<br />
           <span class="text-primary">" One dream at a time "</span>
@@ -139,7 +147,7 @@
         class="absolute top-0 right-0 w-full h-[200%] overflow-hidden -z-10"
       >
         <div
-          class="absolute top-0 -right-[40%] h-[100vh] w-full -rotate-[135deg] -z-10"
+          class="absolute  sm:top-0   sm:-right-[40%]  h-[50vh] sm:h-[100vh] w-[200%] sm:w-full -rotate-[135deg] -z-10 "
         >
           <svg
             width="100%"
@@ -168,7 +176,7 @@
           </svg>
         </div>
         <div
-          class="absolute top-0 -right-[40%] h-[100vh] w-full -rotate-[135deg] -z-20"
+          class="absolute  sm:top-0   sm:-right-[40%]  h-[50vh] sm:h-[100vh] w-[200%] sm:w-full -rotate-[135deg] -z-20"
         >
           <svg
             width="100%"
@@ -614,7 +622,7 @@
     </section>
     <section
       id="Featured-Projects"
-      class="w-full h-full p-4 bg-gradient-to-b from-primary/50 via-primary/80 to-primary"
+      class="w-full h-full p-4 bg-gradient-to-b from-primary/50 via-primary/80 to-primary flex flex-col"
     >
       <div class="text-white flex flex-row justify-center items-center">
         <h2 class="w-full text-4xl text-start p-4 font-bold">
@@ -626,7 +634,7 @@
       </div>
       <div
         id="Featured-Container"
-        class="w-full h-[90%] flex flex-row items-center justify-evenly p-4"
+        class=" w-full h-[90%] flex flex-col overflow-y-scroll scrollbar-hide sm:flex-row items-center justify-evenly p-4"
       >
         <div class="w-full h-full flex flex-col p-5 relative items-center">
           <div
@@ -754,7 +762,7 @@
             >
           </div>
         </div>
-        <div class="w-full h-full flex flex-col p-5 relative items-center">
+        <div class="w-full h-full flex flex-col p-5 relative items-center ">
           <div
             class="w-1/2 aspect-square group-hover:w-0 transition-all duration-500 ease-in-out"
           >
@@ -828,7 +836,9 @@
         style="scroll-timeline-name: --columnsTimeline"
         class="relative w-full h-[90%] p-4 overflow-y-scroll scrollbar-hide"
       >
-        <div class="sticky z-10 w-full h-[15%] -top-6 blur-sm bg-background"></div>
+        <div
+          class="sticky z-10 w-full h-[15%] -top-6 blur-sm bg-background"
+        ></div>
         <div
           class="absolute w-full h-[10%] bottom-0 bg-gradient-to-t from-white to-white/20"
         ></div>
@@ -1122,25 +1132,35 @@
         </div>
       </div>
     </section>
-    <section id="testimonials" class="h-full w-full ">
+    <section id="testimonials" class="h-full w-full">
       <div class="text-center">
         <p class="text-primary">Windows or Mac always leave some feedback</p>
         <h1 class="text-4xl font-bold">Community Feedback</h1>
       </div>
       <div class="grid grid-cols-3 h-3/4 w-full">
-        <div class="col-span-2 w-full h-full p-4 bg-[url('images/map.jpg')] bg-contain bg-center bg-no-repeat bg-origin-content"></div>
+        <div
+          class="col-span-2 w-full h-full p-4 bg-[url('images/map.jpg')] bg-contain bg-center bg-no-repeat bg-origin-content"
+        ></div>
         <div class="bg-black"></div>
       </div>
     </section>
     <footer class="flex flex-col bg-primary h-1/2 w-full p-4">
       <div class="flex flex-row h-full w-full items-start space-x-4 p-4">
-        <img src="images/Logo_reversed.png" alt="Logo_reversed" class="h-1/4 aspect-auto">
+        <img
+          src="images/Logo_reversed.png"
+          alt="Logo_reversed"
+          class="h-1/4 aspect-auto"
+        />
         <div class="bg-black h-full w-full"></div>
         <div class="bg-black h-full w-full"></div>
         <div class="bg-black h-full w-full"></div>
         <div class="bg-black h-full w-full"></div>
       </div>
-      <p class="mt-2 border-t-2 border-white text-center text-lg text-white p-2">All rights reserved <sup>®</sup> Axotopia.com</p>
+      <p
+        class="mt-2 border-t-2 border-white text-center text-lg text-white p-2"
+      >
+        All rights reserved <sup>®</sup> Axotopia.com
+      </p>
     </footer>
   </body>
 </html>
