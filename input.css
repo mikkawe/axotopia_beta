@@ -124,6 +124,10 @@
   .slides:has(div:nth-child(6):target) + .indicators a:nth-child(6) {
     @apply bg-accent w-20;
   }
+  .slides div div:nth-child(2)
+  {
+    @apply hidden sm:block
+  }
   /* width */
   ::-webkit-scrollbar {
     width: 10px;

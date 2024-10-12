@@ -207,8 +207,8 @@
       </div>
     </section>
     <section id="Services" class="relative h-full p-4 w-full">
-      <div class="flex flex-row justify-between p-10 gap-4 h-full w-full">
-        <div class="w-full h-full">
+      <div class="flex flex-col sm:flex-row justify-between p-10 gap-y-1 sm:gap-4 h-full w-full">
+        <div class="w-full h-auto">
           <img
             src="images/Services.png"
             alt="Community"
@@ -270,7 +270,7 @@
       </svg>
     </section>
     <section id="Rules" class="relative h-full p-4 w-full">
-      <div class="flex flex-row justify-between p-10 gap-4 h-full w-full">
+      <div class="flex flex-col-reverse  sm:flex-row justify-between p-10 gap-y-1 sm:gap-4 h-full w-full">
         <div class="w-full h-[100%] text-center flex flex-col justify-center">
           <h2 class="text-3xl font-bold">What We Expect?</h2>
           <h4 class="text-xl">
@@ -306,7 +306,7 @@
             </li>
           </ul>
         </div>
-        <div class="h-full w-full">
+        <div class="h-auto w-full">
           <img
             src="images/guidelines.png"
             alt="Community"
@@ -317,11 +317,11 @@
     </section>
     <section id="Success-Stories" class="w-full h-full p-4">
       <h2
-        class="text-center text-4xl font-extrabold p-4 relative before:absolute before:-top-3 before:-translate-x-[120%] before:aspect-square before:h-full before:bg-[url('images/axotopia-iconAsset-ear.svg')] before:bg-contain before:bg-no-repeat before:scale-x-[-1] after:absolute after:-top-3 after:translate-x-[20%] after:aspect-square after:h-full after:bg-[url('images/axotopia-iconAsset-ear.svg')] after:bg-contain after:bg-no-repeat"
+        class="text-center text-3xl sm:text-4xl font-extrabold p-4 relative before:absolute before:-top-3 before:-translate-x-[120%] before:aspect-square before:h-full before:bg-[url('images/axotopia-iconAsset-ear.svg')] before:bg-contain before:bg-no-repeat before:scale-x-[-1] after:absolute after:-top-3 after:translate-x-[20%] after:aspect-square after:h-full after:bg-[url('images/axotopia-iconAsset-ear.svg')] after:bg-contain after:bg-no-repeat"
       >
         <span class="absolute -top-2 text-lg text-accent">New</span> SUCCESS
         STORIES<span
-          class="absolute -bottom-2 -translate-x-full text-primary text-lg"
+          class="absolute w-full -bottom-2 -translate-x-full text-primary text-lg text-end"
           >Every Day!</span
         >
       </h2>
@@ -959,7 +959,7 @@
               </div>
             </div>
           </div>
-          <div class="column-reverse">
+          <div class="column-reverse ">
             <div class="column-card">
               <div
                 class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"
@@ -1137,15 +1137,15 @@
         <p class="text-primary">Windows or Mac always leave some feedback</p>
         <h1 class="text-4xl font-bold">Community Feedback</h1>
       </div>
-      <div class="grid grid-cols-3 h-3/4 w-full">
+      <div class="flex flex-col sm:grid sm:grid-cols-3 h-3/4 w-full">
         <div
-          class="col-span-2 w-full h-full p-4 bg-[url('images/map.jpg')] bg-contain bg-center bg-no-repeat bg-origin-content"
+          class="sm:col-span-2 w-full h-full p-4 bg-[url('images/map.jpg')] bg-contain bg-center bg-no-repeat bg-origin-content"
         ></div>
-        <div class="bg-black"></div>
+        <div class="bg-black w-full h-full p-4"></div>
       </div>
     </section>
     <footer class="flex flex-col bg-primary h-1/2 w-full p-4">
-      <div class="flex flex-row h-full w-full items-start space-x-4 p-4">
+      <div class="flex flex-col sm:flex-row h-full w-full items-center sm:items-start  space-y-4 sm:space-x-4 p-4">
         <img
           src="images/Logo_reversed.png"
           alt="Logo_reversed"
