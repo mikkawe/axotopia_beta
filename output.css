@@ -918,10 +918,6 @@ body {
   z-index: 50;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -952,10 +948,6 @@ body {
 
 .flex {
   display: flex;
-}
-
-.grid {
-  display: grid;
 }
 
 .hidden {
@@ -1034,6 +1026,10 @@ body {
   height: 100%;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -1074,6 +1070,14 @@ body {
   width: 100%;
 }
 
+.w-auto {
+  width: auto;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
 .max-w-full {
   max-width: 100%;
 }
@@ -1093,6 +1097,11 @@ body {
 
 .-rotate-\[135deg\] {
   --tw-rotate: -135deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-x-\[-1\] {
+  --tw-scale-x: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1151,10 +1160,6 @@ body {
   scroll-padding-top: 30%;
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -1169,10 +1174,6 @@ body {
 
 .flex-nowrap {
   flex-wrap: nowrap;
-}
-
-.items-start {
-  align-items: flex-start;
 }
 
 .items-center {
@@ -1320,6 +1321,10 @@ body {
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'images\/axotopia-iconAsset-ear\.svg\'\)\] {
+  background-image: url('images/axotopia-iconAsset-ear.svg');
 }
 
 .from-background {
