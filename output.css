@@ -868,8 +868,8 @@ body {
 }
 
 .row {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .row-reverse {
@@ -879,8 +879,8 @@ body {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
   background-color: hsl(var(--background));
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .row-reverse .column-card {
@@ -1021,10 +1021,6 @@ body {
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
 .flex {
   display: flex;
 }
@@ -1141,28 +1137,16 @@ body {
   width: 200%;
 }
 
+.w-\[250\%\] {
+  width: 250%;
+}
+
 .w-\[35\%\] {
   width: 35%;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-\[90\%\] {
-  width: 90%;
-}
-
-.w-auto {
-  width: auto;
-}
-
-.w-\[300\%\] {
-  width: 300%;
-}
-
-.w-\[250\%\] {
-  width: 250%;
 }
 
 .max-w-full {
@@ -1302,10 +1286,6 @@ body {
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-x-visible {
-  overflow-x: visible;
 }
 
 .overflow-x-scroll {
