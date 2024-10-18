@@ -46,15 +46,28 @@
         from {
           transform: translateY(-75%);
         }
-
         /* End position: shift entire column down, but not so that it goes out of view */
         to {
           transform: translateY(75%);
         }
       }
+      @keyframes adjust-pos-row {
+        /* Start position: shift entire row left, but not so that it goes out of view */
+        from {
+          transform: translateX(-75%);
+        }
+        /* End position: shift entire row right, but not so that it goes out of view */
+        to {
+          transform: translateX(75%);
+        }
+      }
       .column-reverse {
         animation: adjust-pos linear forwards;
         animation-timeline: --columnsTimeline;
+      }
+      .row-reverse{
+        animation: adjust-pos-row linear forwards;
+        animation-timeline: --rowsTimeline;
       }
       .revealing-image {
         /* Create View Timeline */
@@ -838,7 +851,7 @@
       <div
         id="film-wrapper"
         style="scroll-timeline-name: --columnsTimeline"
-        class="relative w-full h-[90%] p-4 overflow-y-scroll scrollbar-hide"
+        class="hidden sm:block relative w-full h-[90%] p-4 overflow-y-scroll scrollbar-hide"
       >
         <div
           class="sticky z-10 w-full h-[15%] -top-6 blur-sm bg-background"
@@ -963,7 +976,7 @@
               </div>
             </div>
           </div>
-          <div class="column-reverse hidden sm:flex">
+          <div class="column-reverse">
             <div class="column-card">
               <div
                 class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"
@@ -1080,6 +1093,184 @@
             </div>
           </div>
           <div class="column-reverse hidden lg:flex">
+            <div class="column-card">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-primary text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p class="text-white text-justify px-2 border-t-2 border-white">
+                  Supporter
+                </p>
+              </div>
+            </div>
+            <div class="column-card">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-primary text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p class="text-white text-justify px-2 border-t-2 border-white">
+                  Supporter
+                </p>
+              </div>
+            </div>
+            <div class="column-card">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-primary text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p class="text-white text-justify px-2 border-t-2 border-white">
+                  Supporter
+                </p>
+              </div>
+            </div>
+            <div class="column-card">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-primary text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p class="text-white text-justify px-2 border-t-2 border-white">
+                  Supporter
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="film-wrapper"
+        style="scroll-timeline-name: --rowsTimeline;scroll-timeline-axis: x;"
+        class=" sm:hidden relative w-full p-4 overflow-x-scroll "
+      >
+        <div class="rows w-[250%]">
+          <div class="row-reverse">
+            <div class="column-card">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-primary text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p class="text-white text-justify px-2 border-t-2 border-white">
+                  Supporter
+                </p>
+              </div>
+            </div>
+            <div class="column-card">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-primary text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p class="text-white text-justify px-2 border-t-2 border-white">
+                  Supporter
+                </p>
+              </div>
+            </div>
+            <div class="column-card">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-primary text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p class="text-white text-justify px-2 border-t-2 border-white">
+                  Supporter
+                </p>
+              </div>
+            </div>
+            <div class="column-card">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-primary text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p class="text-white text-justify px-2 border-t-2 border-white">
+                  Supporter
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-card border-4 border-primary">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-accent bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-accent text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p
+                  class="text-primary text-justify px-2 border-t-2 border-primary"
+                >
+                  Partner
+                </p>
+              </div>
+            </div>
+            <div class="column-card border-4 border-primary">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-accent bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-accent text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p
+                  class="text-primary text-justify px-2 border-t-2 border-primary"
+                >
+                  Partner
+                </p>
+              </div>
+            </div>
+            <div class="column-card border-4 border-primary">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-accent bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-accent text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p
+                  class="text-primary text-justify px-2 border-t-2 border-primary"
+                >
+                  Partner
+                </p>
+              </div>
+            </div>
+            <div class="column-card border-4 border-primary">
+              <div
+                class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-accent bg-[url('images/team-member-3.jpg')] bg-cover"
+              ></div>
+              <div>
+                <h3 class="text-accent text-xl text-start w-full font-bold">
+                  Ahmed Mikkawe
+                </h3>
+                <p
+                  class="text-primary text-justify px-2 border-t-2 border-primary"
+                >
+                  Partner
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row-reverse">
             <div class="column-card">
               <div
                 class="w-1/2 md:w-2/5 aspect-square rounded-full shadow-md border-4 border-background bg-[url('images/team-member-3.jpg')] bg-cover"

@@ -846,6 +846,81 @@ body {
   background-color: hsl(var(--primary) / var(--tw-bg-opacity));
 }
 
+.rows {
+  position: relative;
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  overflow-x: hidden;
+  padding: 1.25rem;
+}
+
+.row {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+
+.row > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.row {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.row-reverse {
+  display: flex;
+  height: 100%;
+  flex-direction: row-reverse;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  background-color: hsl(var(--background));
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.row-reverse .column-card {
+  height: 100%;
+  width: auto;
+  background-color: hsl(var(--primary) / 0.5);
+  padding: 1rem;
+}
+
+.row-reverse .column-card::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--primary) / var(--tw-bg-opacity));
+}
+
+.row-reverse .column-card::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--primary) / var(--tw-bg-opacity));
+}
+
+.row .column-card {
+  height: 100%;
+  width: auto;
+  background-color: hsl(var(--primary) / 0.5);
+  padding: 1rem;
+}
+
+.row .column-card::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--primary) / var(--tw-bg-opacity));
+}
+
+.row .column-card::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--primary) / var(--tw-bg-opacity));
+}
+
 .fixed {
   position: fixed;
 }
@@ -946,6 +1021,10 @@ body {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -1026,10 +1105,6 @@ body {
   height: 100%;
 }
 
-.h-20 {
-  height: 5rem;
-}
-
 .max-h-full {
   max-height: 100%;
 }
@@ -1044,6 +1119,10 @@ body {
 
 .w-2\/5 {
   width: 40%;
+}
+
+.w-4\/5 {
+  width: 80%;
 }
 
 .w-5 {
@@ -1070,12 +1149,20 @@ body {
   width: 100%;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .w-auto {
   width: auto;
 }
 
-.w-4\/5 {
-  width: 80%;
+.w-\[300\%\] {
+  width: 300%;
+}
+
+.w-\[250\%\] {
+  width: 250%;
 }
 
 .max-w-full {
@@ -1097,11 +1184,6 @@ body {
 
 .-rotate-\[135deg\] {
   --tw-rotate: -135deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-x-\[-1\] {
-  --tw-scale-x: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1222,6 +1304,10 @@ body {
   overflow: hidden;
 }
 
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
 .overflow-x-scroll {
   overflow-x: scroll;
 }
@@ -1321,10 +1407,6 @@ body {
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'images\/axotopia-iconAsset-ear\.svg\'\)\] {
-  background-image: url('images/axotopia-iconAsset-ear.svg');
 }
 
 .from-background {
@@ -1691,6 +1773,10 @@ body {
 
   .sm\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .sm\:block {
+    display: block;
   }
 
   .sm\:flex {
